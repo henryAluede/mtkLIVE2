@@ -16,6 +16,7 @@ using System.Threading.Tasks;
 using System.Dynamic;
 using Dermalog.Afis.FingerCode3;
 using Bunifu.UI.WinForms;
+using Alertform;
 
 namespace DermalogMultiScannerDemo
 {
@@ -579,20 +580,34 @@ namespace DermalogMultiScannerDemo
         {
             //pix_login.Visible = true;
             //String enteredUsername = xamlTextBoxUsername.Text.Trim();
-            individual_data strResponse = null;
+            //individual_data strResponse = null;
+            dynamic strResponse = new ExpandoObject();
             //Task.Run(() =>
             {
 
                 {
-                    // displayMessage("Verifying Template File.....", Utils.COLOR_DERMALOG_RED);
-                    //string externalAPI = Properties.Settings.Default.ExternalAPIAddress;
-                    //string servNAME = string.Format("infometriq-partner-api/individuals/{0}/username", enteredUsername);
-                    //strResponse = Utils.call_External_WEBAPI_GETService(servNAME);
+                   
                     using (tranxDataContext tx = new tranxDataContext())
                     {
                         tx.Connection.ConnectionString = Utils.getConnection();
-                        var ds = tx.individual_datas.FirstOrDefault(s => s.username == enteredUsername);
-                        strResponse = ds;
+                        var ds = tx.individual_datas
+                            .FirstOrDefault(s => s.username == enteredUsername);
+
+                        if (ds != null)
+                        {
+
+
+                            strResponse = ds;
+                            winforms.Form_data fm = new winforms.Form_data(strResponse, true);
+                            fm.ShowDialog();
+
+                        }
+                        else
+                        {
+                            AlertForm1 al = new AlertForm1("Individual Data noavailable Locally", 
+                                AlertForm1.AlertOptions.OK, AlertForm1.AlertType.error);
+                            al.ShowDialog();
+                        }
                         //strResponse = Newtonsoft.Json.JsonConvert.SerializeObject(ds);
                     }
                     //strResponse = Utils.call_WEBAPI_GETService("infometriq-partner-api/individuals");
@@ -607,8 +622,7 @@ namespace DermalogMultiScannerDemo
             //pix_login.Visible = false;
 
 
-            winforms.Form_data fm = new winforms.Form_data(strResponse, false);
-            fm.ShowDialog();
+            
         }
 
 

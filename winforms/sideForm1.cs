@@ -79,11 +79,11 @@ namespace DermalogMultiScannerDemo.winforms
                     btn_Identification.Enabled = false;
                     break;
                 case "Administrator":
-                    btn_verifyTemplate.Enabled = btn_enroll.Enabled = false;
-                    btn_creatUser.Enabled =
-                    btn_Identification.Enabled =  true;
+                //    btn_verifyTemplate.Enabled = btn_enroll.Enabled =
+                //    btn_creatUser.Enabled =
+                //    btn_Identification.Enabled = btn_resetData.Enabled = true;
 
-                    break;
+                //    break;
                 case "Super":
                     btn_verifyTemplate.Enabled = btn_enroll.Enabled =
                     btn_creatUser.Enabled =
@@ -454,6 +454,9 @@ namespace DermalogMultiScannerDemo.winforms
         {
             Application.Exit();
         }
+
+
+        
 
         public FPScanner FingerPrintScanner { get; internal set; }
         public void connect_Device()
@@ -961,8 +964,8 @@ namespace DermalogMultiScannerDemo.winforms
         {
             {
                 //EnterUsernameWindow_new
-                EnterUsernameWindow_new enterUsernameWindow =
-                    new EnterUsernameWindow_new("Check using UserName");
+                EnterUsernameWindow_LocalOnline enterUsernameWindow =
+                    new EnterUsernameWindow_LocalOnline("Check using UserName");
                 //enterUsernameWindow.Owner = this;
                 enterUsernameWindow.ShowDialog();
 

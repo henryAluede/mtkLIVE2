@@ -74,7 +74,10 @@ namespace DermalogMultiScannerDemo.winforms
             }
             catch (Exception ex) { }
         }
-        private void NewMethod_callService_local(individual_data individual)
+       
+        
+        //private void NewMethod_callService_local(individual_data individual)
+       private void NewMethod_callService_local(individual_data individual)
         {
 
             try
