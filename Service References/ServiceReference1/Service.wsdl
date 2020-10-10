@@ -1,0 +1,952 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://192.168.40.253:81/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://192.168.40.253:81/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://192.168.40.253:81/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HelloWorld2">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorld2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorld2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_JSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mm" type="tns:sample_response" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="sample_response">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BVN" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="get_JSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_JSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getList">
+        <s:complexType />
+      </s:element>
+      <s:element name="getListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getListResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getList2">
+        <s:complexType />
+      </s:element>
+      <s:element name="getList2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getList2Result" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getListAll">
+        <s:complexType />
+      </s:element>
+      <s:element name="getListAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getListAllResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getListTaxmaster">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cmdSQL" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getListTaxmasterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getListTaxmasterResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getListAnySQL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cmdSQL" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getListAnySQLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getListAnySQLResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="genReportAnySQL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cmdSQL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sfilename" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="genReportAnySQLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="genReportAnySQLResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getListAnySQLTest">
+        <s:complexType />
+      </s:element>
+      <s:element name="getListAnySQLTestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getListAnySQLTestResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="send_getList">
+        <s:complexType />
+      </s:element>
+      <s:element name="send_getListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="send_getListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="send_getList_new">
+        <s:complexType />
+      </s:element>
+      <s:element name="send_getList_newResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="send_getList_newResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="ArrayOfString" nillable="true" type="tns:ArrayOfString" />
+      <s:element name="DataTable" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+            <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorld2SoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld2" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorld2SoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorld2Response" />
+  </wsdl:message>
+  <wsdl:message name="get_JSONSoapIn">
+    <wsdl:part name="parameters" element="tns:get_JSON" />
+  </wsdl:message>
+  <wsdl:message name="get_JSONSoapOut">
+    <wsdl:part name="parameters" element="tns:get_JSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="getListSoapIn">
+    <wsdl:part name="parameters" element="tns:getList" />
+  </wsdl:message>
+  <wsdl:message name="getListSoapOut">
+    <wsdl:part name="parameters" element="tns:getListResponse" />
+  </wsdl:message>
+  <wsdl:message name="getList2SoapIn">
+    <wsdl:part name="parameters" element="tns:getList2" />
+  </wsdl:message>
+  <wsdl:message name="getList2SoapOut">
+    <wsdl:part name="parameters" element="tns:getList2Response" />
+  </wsdl:message>
+  <wsdl:message name="getListAllSoapIn">
+    <wsdl:part name="parameters" element="tns:getListAll" />
+  </wsdl:message>
+  <wsdl:message name="getListAllSoapOut">
+    <wsdl:part name="parameters" element="tns:getListAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="getListTaxmasterSoapIn">
+    <wsdl:part name="parameters" element="tns:getListTaxmaster" />
+  </wsdl:message>
+  <wsdl:message name="getListTaxmasterSoapOut">
+    <wsdl:part name="parameters" element="tns:getListTaxmasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="getListAnySQLSoapIn">
+    <wsdl:part name="parameters" element="tns:getListAnySQL" />
+  </wsdl:message>
+  <wsdl:message name="getListAnySQLSoapOut">
+    <wsdl:part name="parameters" element="tns:getListAnySQLResponse" />
+  </wsdl:message>
+  <wsdl:message name="genReportAnySQLSoapIn">
+    <wsdl:part name="parameters" element="tns:genReportAnySQL" />
+  </wsdl:message>
+  <wsdl:message name="genReportAnySQLSoapOut">
+    <wsdl:part name="parameters" element="tns:genReportAnySQLResponse" />
+  </wsdl:message>
+  <wsdl:message name="getListAnySQLTestSoapIn">
+    <wsdl:part name="parameters" element="tns:getListAnySQLTest" />
+  </wsdl:message>
+  <wsdl:message name="getListAnySQLTestSoapOut">
+    <wsdl:part name="parameters" element="tns:getListAnySQLTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="send_getListSoapIn">
+    <wsdl:part name="parameters" element="tns:send_getList" />
+  </wsdl:message>
+  <wsdl:message name="send_getListSoapOut">
+    <wsdl:part name="parameters" element="tns:send_getListResponse" />
+  </wsdl:message>
+  <wsdl:message name="send_getList_newSoapIn">
+    <wsdl:part name="parameters" element="tns:send_getList_new" />
+  </wsdl:message>
+  <wsdl:message name="send_getList_newSoapOut">
+    <wsdl:part name="parameters" element="tns:send_getList_newResponse" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldHttpGetIn" />
+  <wsdl:message name="HelloWorldHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorld2HttpGetIn" />
+  <wsdl:message name="HelloWorld2HttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getListHttpGetIn" />
+  <wsdl:message name="getListHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="getList2HttpGetIn" />
+  <wsdl:message name="getList2HttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="getListAllHttpGetIn" />
+  <wsdl:message name="getListAllHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="getListTaxmasterHttpGetIn">
+    <wsdl:part name="cmdSQL" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getListTaxmasterHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="getListAnySQLHttpGetIn">
+    <wsdl:part name="cmdSQL" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getListAnySQLHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="genReportAnySQLHttpGetIn">
+    <wsdl:part name="cmdSQL" type="s:string" />
+    <wsdl:part name="sfilename" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="genReportAnySQLHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getListAnySQLTestHttpGetIn" />
+  <wsdl:message name="getListAnySQLTestHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="send_getListHttpGetIn" />
+  <wsdl:message name="send_getListHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="send_getList_newHttpGetIn" />
+  <wsdl:message name="send_getList_newHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldHttpPostIn" />
+  <wsdl:message name="HelloWorldHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorld2HttpPostIn" />
+  <wsdl:message name="HelloWorld2HttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getListHttpPostIn" />
+  <wsdl:message name="getListHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="getList2HttpPostIn" />
+  <wsdl:message name="getList2HttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="getListAllHttpPostIn" />
+  <wsdl:message name="getListAllHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="getListTaxmasterHttpPostIn">
+    <wsdl:part name="cmdSQL" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getListTaxmasterHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="getListAnySQLHttpPostIn">
+    <wsdl:part name="cmdSQL" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getListAnySQLHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="genReportAnySQLHttpPostIn">
+    <wsdl:part name="cmdSQL" type="s:string" />
+    <wsdl:part name="sfilename" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="genReportAnySQLHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getListAnySQLTestHttpPostIn" />
+  <wsdl:message name="getListAnySQLTestHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="send_getListHttpPostIn" />
+  <wsdl:message name="send_getListHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="send_getList_newHttpPostIn" />
+  <wsdl:message name="send_getList_newHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld2">
+      <wsdl:input message="tns:HelloWorld2SoapIn" />
+      <wsdl:output message="tns:HelloWorld2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_JSON">
+      <wsdl:input message="tns:get_JSONSoapIn" />
+      <wsdl:output message="tns:get_JSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getList">
+      <wsdl:input message="tns:getListSoapIn" />
+      <wsdl:output message="tns:getListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getList2">
+      <wsdl:input message="tns:getList2SoapIn" />
+      <wsdl:output message="tns:getList2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getListAll">
+      <wsdl:input message="tns:getListAllSoapIn" />
+      <wsdl:output message="tns:getListAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getListTaxmaster">
+      <wsdl:input message="tns:getListTaxmasterSoapIn" />
+      <wsdl:output message="tns:getListTaxmasterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getListAnySQL">
+      <wsdl:input message="tns:getListAnySQLSoapIn" />
+      <wsdl:output message="tns:getListAnySQLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="genReportAnySQL">
+      <wsdl:input message="tns:genReportAnySQLSoapIn" />
+      <wsdl:output message="tns:genReportAnySQLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getListAnySQLTest">
+      <wsdl:input message="tns:getListAnySQLTestSoapIn" />
+      <wsdl:output message="tns:getListAnySQLTestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="send_getList">
+      <wsdl:input message="tns:send_getListSoapIn" />
+      <wsdl:output message="tns:send_getListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="send_getList_new">
+      <wsdl:input message="tns:send_getList_newSoapIn" />
+      <wsdl:output message="tns:send_getList_newSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ServiceHttpGet">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldHttpGetIn" />
+      <wsdl:output message="tns:HelloWorldHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld2">
+      <wsdl:input message="tns:HelloWorld2HttpGetIn" />
+      <wsdl:output message="tns:HelloWorld2HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getList">
+      <wsdl:input message="tns:getListHttpGetIn" />
+      <wsdl:output message="tns:getListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getList2">
+      <wsdl:input message="tns:getList2HttpGetIn" />
+      <wsdl:output message="tns:getList2HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getListAll">
+      <wsdl:input message="tns:getListAllHttpGetIn" />
+      <wsdl:output message="tns:getListAllHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getListTaxmaster">
+      <wsdl:input message="tns:getListTaxmasterHttpGetIn" />
+      <wsdl:output message="tns:getListTaxmasterHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getListAnySQL">
+      <wsdl:input message="tns:getListAnySQLHttpGetIn" />
+      <wsdl:output message="tns:getListAnySQLHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="genReportAnySQL">
+      <wsdl:input message="tns:genReportAnySQLHttpGetIn" />
+      <wsdl:output message="tns:genReportAnySQLHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getListAnySQLTest">
+      <wsdl:input message="tns:getListAnySQLTestHttpGetIn" />
+      <wsdl:output message="tns:getListAnySQLTestHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="send_getList">
+      <wsdl:input message="tns:send_getListHttpGetIn" />
+      <wsdl:output message="tns:send_getListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="send_getList_new">
+      <wsdl:input message="tns:send_getList_newHttpGetIn" />
+      <wsdl:output message="tns:send_getList_newHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ServiceHttpPost">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldHttpPostIn" />
+      <wsdl:output message="tns:HelloWorldHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld2">
+      <wsdl:input message="tns:HelloWorld2HttpPostIn" />
+      <wsdl:output message="tns:HelloWorld2HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getList">
+      <wsdl:input message="tns:getListHttpPostIn" />
+      <wsdl:output message="tns:getListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getList2">
+      <wsdl:input message="tns:getList2HttpPostIn" />
+      <wsdl:output message="tns:getList2HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getListAll">
+      <wsdl:input message="tns:getListAllHttpPostIn" />
+      <wsdl:output message="tns:getListAllHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getListTaxmaster">
+      <wsdl:input message="tns:getListTaxmasterHttpPostIn" />
+      <wsdl:output message="tns:getListTaxmasterHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getListAnySQL">
+      <wsdl:input message="tns:getListAnySQLHttpPostIn" />
+      <wsdl:output message="tns:getListAnySQLHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="genReportAnySQL">
+      <wsdl:input message="tns:genReportAnySQLHttpPostIn" />
+      <wsdl:output message="tns:genReportAnySQLHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getListAnySQLTest">
+      <wsdl:input message="tns:getListAnySQLTestHttpPostIn" />
+      <wsdl:output message="tns:getListAnySQLTestHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="send_getList">
+      <wsdl:input message="tns:send_getListHttpPostIn" />
+      <wsdl:output message="tns:send_getListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="send_getList_new">
+      <wsdl:input message="tns:send_getList_newHttpPostIn" />
+      <wsdl:output message="tns:send_getList_newHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://192.168.40.253:81/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld2">
+      <soap:operation soapAction="http://192.168.40.253:81/HelloWorld2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_JSON">
+      <soap:operation soapAction="http://192.168.40.253:81/get_JSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getList">
+      <soap:operation soapAction="http://192.168.40.253:81/getList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getList2">
+      <soap:operation soapAction="http://192.168.40.253:81/getList2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListAll">
+      <soap:operation soapAction="http://192.168.40.253:81/getListAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListTaxmaster">
+      <soap:operation soapAction="http://192.168.40.253:81/getListTaxmaster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListAnySQL">
+      <soap:operation soapAction="http://192.168.40.253:81/getListAnySQL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="genReportAnySQL">
+      <soap:operation soapAction="http://192.168.40.253:81/genReportAnySQL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListAnySQLTest">
+      <soap:operation soapAction="http://192.168.40.253:81/getListAnySQLTest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="send_getList">
+      <soap:operation soapAction="http://192.168.40.253:81/send_getList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="send_getList_new">
+      <soap:operation soapAction="http://192.168.40.253:81/send_getList_new" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://192.168.40.253:81/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld2">
+      <soap12:operation soapAction="http://192.168.40.253:81/HelloWorld2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_JSON">
+      <soap12:operation soapAction="http://192.168.40.253:81/get_JSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getList">
+      <soap12:operation soapAction="http://192.168.40.253:81/getList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getList2">
+      <soap12:operation soapAction="http://192.168.40.253:81/getList2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListAll">
+      <soap12:operation soapAction="http://192.168.40.253:81/getListAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListTaxmaster">
+      <soap12:operation soapAction="http://192.168.40.253:81/getListTaxmaster" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListAnySQL">
+      <soap12:operation soapAction="http://192.168.40.253:81/getListAnySQL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="genReportAnySQL">
+      <soap12:operation soapAction="http://192.168.40.253:81/genReportAnySQL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListAnySQLTest">
+      <soap12:operation soapAction="http://192.168.40.253:81/getListAnySQLTest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="send_getList">
+      <soap12:operation soapAction="http://192.168.40.253:81/send_getList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="send_getList_new">
+      <soap12:operation soapAction="http://192.168.40.253:81/send_getList_new" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceHttpGet" type="tns:ServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="HelloWorld">
+      <http:operation location="/HelloWorld" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld2">
+      <http:operation location="/HelloWorld2" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getList">
+      <http:operation location="/getList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getList2">
+      <http:operation location="/getList2" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListAll">
+      <http:operation location="/getListAll" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListTaxmaster">
+      <http:operation location="/getListTaxmaster" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListAnySQL">
+      <http:operation location="/getListAnySQL" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="genReportAnySQL">
+      <http:operation location="/genReportAnySQL" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListAnySQLTest">
+      <http:operation location="/getListAnySQLTest" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="send_getList">
+      <http:operation location="/send_getList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="send_getList_new">
+      <http:operation location="/send_getList_new" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceHttpPost" type="tns:ServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="HelloWorld">
+      <http:operation location="/HelloWorld" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld2">
+      <http:operation location="/HelloWorld2" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getList">
+      <http:operation location="/getList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getList2">
+      <http:operation location="/getList2" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListAll">
+      <http:operation location="/getListAll" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListTaxmaster">
+      <http:operation location="/getListTaxmaster" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListAnySQL">
+      <http:operation location="/getListAnySQL" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="genReportAnySQL">
+      <http:operation location="/genReportAnySQL" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListAnySQLTest">
+      <http:operation location="/getListAnySQLTest" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="send_getList">
+      <http:operation location="/send_getList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="send_getList_new">
+      <http:operation location="/send_getList_new" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://192.168.40.253:81/testweb/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://192.168.40.253:81/testweb/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceHttpGet" binding="tns:ServiceHttpGet">
+      <http:address location="http://192.168.40.253:81/testweb/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceHttpPost" binding="tns:ServiceHttpPost">
+      <http:address location="http://192.168.40.253:81/testweb/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

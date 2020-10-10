@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 10.875" name="tranx">
+  <DataContextMoniker Name="/tranxDataContext" />
+  <nestedChildShapes>
+    <classShape Id="ef231abe-5a69-417e-a9f0-77e77a56bbf8" absoluteBounds="1.125, 0.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/tranxDataContext/fingerprint_Table_verify" />
+      <nestedChildShapes>
+        <elementListCompartment Id="220f8d12-d8e6-4855-9593-4c47468fc1f7" absoluteBounds="1.1400000000000001, 1.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b012b136-c963-46bf-81cc-77cab6ae3e00" absoluteBounds="1.125, 3.25, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/tranxDataContext/fingerprint_Table" />
+      <nestedChildShapes>
+        <elementListCompartment Id="10471e7d-d7d1-4103-9531-ab607f151d5d" absoluteBounds="1.1399999999999997, 3.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4198374c-8c52-4135-8598-5c15b07be9d1" absoluteBounds="4.25, 0.5, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/tranxDataContext/userTable_1" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a06dbb1b-1151-4b33-bad9-6d7927192cc7" absoluteBounds="4.265, 0.96, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="624c8a48-e734-42fe-8db9-40f3f4c6a69f" absoluteBounds="4.875, 3.5, 2, 7.1553369140625">
+      <DataClassMoniker Name="/tranxDataContext/individual_data" />
+      <nestedChildShapes>
+        <elementListCompartment Id="06525046-a8ec-43a8-af13-a7d22d4dde6b" absoluteBounds="4.89, 3.96, 1.9700000000000002, 6.5953369140625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="130a8455-3c1f-4d99-bd56-4d7c28e878ae" absoluteBounds="1.125, 5.875, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/tranxDataContext/appControlTable_1" />
+      <nestedChildShapes>
+        <elementListCompartment Id="323b3b88-324f-4b99-857d-9e0ca63aca3c" absoluteBounds="1.1400000000000001, 6.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
