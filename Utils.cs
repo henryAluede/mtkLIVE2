@@ -17,6 +17,7 @@ using System.Dynamic;
 using Dermalog.Afis.FingerCode3;
 using Bunifu.UI.WinForms;
 using Alertform;
+using System.Text.RegularExpressions;
 
 namespace DermalogMultiScannerDemo
 {
@@ -623,6 +624,13 @@ namespace DermalogMultiScannerDemo
 
 
             
+        }
+
+        public static string TrimNonAscii(string value)
+        {
+            string pattern = "[^ -~]+";
+            Regex reg_exp = new Regex(pattern);
+            return reg_exp.Replace(value, "");
         }
 
 
