@@ -123,6 +123,24 @@ namespace DermalogMultiScannerDemo.winforms
                 Pix_client.Refresh();
                 genBarcode(confirmation_code);
 
+                dynamic vcard = new ExpandoObject();
+                vcard.name = string.Format(@"{0} {1}", (string)individual.first_name, (string)individual.last_name).Replace(' ', '+');
+                vcard.org = (string)individual.verified_status.Replace(' ', '+');
+                vcard.title = (string)individual.gender.Replace(' ', '+').ToUpper();
+                vcard.tel = (string)individual.phone;
+
+
+
+                vcard.email = (string)individual.email.Replace("@", "%40");
+                vcard.url = (string)individual.website.Replace("@", "%40");
+                vcard.note = string.Format(@" InfoMetriQ VCard : [{0}] [{1}] Award:[{2}]", (string)individual.verified_status.Replace(' ', '+'),
+                    (string)individual.account_type.Replace(' ', '+'),Utils. (string)individual.recognition.Replace(' ', '+'));
+
+
+
+
+
+                pictureBox1.Image = Utils.gen_specialQRCODE(vcard);
                 //Utils.showAnimation(Pix_client, bunifuTransition1);
 
             }
@@ -416,8 +434,9 @@ namespace DermalogMultiScannerDemo.winforms
 
         private void btn_getData_Click(object sender, EventArgs e)
         {
-            pix_login.Visible = true;
-            NewMethod_callService2();
+            //pix_login.Visible = true;
+            //NewMethod_callService2();
+            //pictureBox1.Image = Utils.gen_specialQRCODE();
         }
     }
 }
