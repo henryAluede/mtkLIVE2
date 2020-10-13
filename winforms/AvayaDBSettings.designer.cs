@@ -397,7 +397,7 @@
             // 
             this.cb_branch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_branch.FormattingEnabled = true;
-            this.cb_branch.Location = new System.Drawing.Point(583, 334);
+            this.cb_branch.Location = new System.Drawing.Point(612, 300);
             this.cb_branch.Name = "cb_branch";
             this.cb_branch.Size = new System.Drawing.Size(63, 21);
             this.cb_branch.TabIndex = 56;
@@ -407,7 +407,7 @@
             // camToggle1
             // 
             this.camToggle1.AutoSize = true;
-            this.camToggle1.Location = new System.Drawing.Point(178, 522);
+            this.camToggle1.Location = new System.Drawing.Point(150, 522);
             this.camToggle1.Name = "camToggle1";
             this.camToggle1.Size = new System.Drawing.Size(80, 17);
             this.camToggle1.TabIndex = 48;
@@ -600,7 +600,7 @@
             this.btn_downloadSettings.BackColor = System.Drawing.Color.DimGray;
             this.btn_downloadSettings.Enabled = false;
             this.btn_downloadSettings.ForeColor = System.Drawing.Color.White;
-            this.btn_downloadSettings.Location = new System.Drawing.Point(287, 514);
+            this.btn_downloadSettings.Location = new System.Drawing.Point(15, 489);
             this.btn_downloadSettings.Name = "btn_downloadSettings";
             this.btn_downloadSettings.Size = new System.Drawing.Size(127, 28);
             this.btn_downloadSettings.TabIndex = 2;
