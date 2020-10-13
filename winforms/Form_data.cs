@@ -319,7 +319,10 @@ namespace DermalogMultiScannerDemo.winforms
                         newDM.ProfessionDesc = dm.dataprofession_name;
                         token = JToken.Parse(strResponse);
                         newDM.strResponse =  JObject.Parse(token.ToString());
-                        newDM.strResponse.data.individual.about =  newDM.Data.about = "Available Online";;
+                        //newDM.strResponse.data.individual.about =  newDM.Data.about = "Available Online";;
+                        newDM.strResponse.data.individual.about = newDM.Data.about = Utils.TrimNonAscii((string)newDM.Data.about);
+
+
 
                         dynamic ind2 = new ExpandoObject();
                         ind2.mydata = newDM;
