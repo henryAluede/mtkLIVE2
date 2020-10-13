@@ -302,7 +302,8 @@ namespace DermalogMultiScannerDemo.winforms
                         token = JToken.Parse(strResponse);
                         newDM.strResponse =  JObject.Parse(token.ToString());
                         //newDM.strResponse.data.individual.about = newDM.Data.about = "Available Online"; ;
-                        newDM.strResponse.data.individual.about = newDM.Data.about = Utils.TrimNonAscii((string)newDM.Data.about) ;
+                        newDM.strResponse.data.individual.about = newDM.Data.about =
+                           newDM.Data.about != null ? Utils.TrimNonAscii((string)newDM.Data.about) : "Not Provided";
 
                         dynamic ind2 = new ExpandoObject();
                         ind2.mydata = newDM;
