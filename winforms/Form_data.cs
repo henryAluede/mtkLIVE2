@@ -69,6 +69,32 @@ namespace DermalogMultiScannerDemo.winforms
                 Pix_client.Refresh();
                 genBarcode(confirmation_code);
 
+
+                dynamic vcard = new ExpandoObject();
+                vcard.name = string.Format(@"{0} {1}", (string)dm.data.individual.first_name, (string)dm.data.individual.last_name).Replace(' ', '+');
+                //dynamic ddd = new ExpandoObject();
+                //ddd = JObject.Parse((string)dm.data.work_history[0]);
+                vcard.org = dm.data.work_history[0].company.ToString().Replace(' ', '+');
+                vcard.title = dm.data.work_history[0].position.ToString().Replace(' ', '+').ToUpper();
+                vcard.work = dm.data.individual.phone==null?"Not+Provided": dm.data.individual.phone.ToString().Replace(' ', '+');
+
+
+
+                vcard.email = dm.data.individual.email.ToString().Replace("@", "%40");
+                vcard.url = dm.data.individual.website.ToString().Replace("@", "%40");
+                vcard.note = string.Format(@" InfoMetriQ VCard : [{0}] [{1}] Award:[{2}]", dm.data.individual.verified_status.ToString().Replace(' ', '+'),
+                    (string)dm.data.individual.account_type.ToString().Replace(' ', '+'),
+                    dm.data.individual.recognition != null ? Utils.TrimNonAscii(dm.data.individual.recognition.ToString().Replace(' ', '+')) : "None");
+
+
+
+
+
+                pictureBox1.Image = Utils.gen_specialQRCODE(vcard);
+
+
+
+
                 //Utils.showAnimation(Pix_client, bunifuTransition1);
 
             }
@@ -84,8 +110,9 @@ namespace DermalogMultiScannerDemo.winforms
             {
 
                 dynamic dm = new ExpandoObject();
-                ////dm = JObject.Parse((string)Newtonsoft.Json.JsonConvert.DeserializeObject(strResponse));
-                dm = Newtonsoft.Json.JsonConvert.DeserializeObject(individual.strResponse);
+                //dm = JObject.Parse((string)Newtonsoft.Json.JsonConvert.DeserializeObject(individual.strResponse));
+                dm = JObject.Parse((string)(individual.strResponse));
+                //dm = Newtonsoft.Json.JsonConvert.DeserializeObject(individual.strResponse);
 
                 string id = individual.id;
                 lb_firstname.Text = individual.first_name;
@@ -125,16 +152,19 @@ namespace DermalogMultiScannerDemo.winforms
 
                 dynamic vcard = new ExpandoObject();
                 vcard.name = string.Format(@"{0} {1}", (string)individual.first_name, (string)individual.last_name).Replace(' ', '+');
-                vcard.org = (string)individual.verified_status.Replace(' ', '+');
-                vcard.title = (string)individual.gender.Replace(' ', '+').ToUpper();
-                vcard.tel = (string)individual.phone;
-
+                //dynamic ddd = new ExpandoObject();
+                //ddd = JObject.Parse((string)dm.data.work_history[0]);
+                vcard.org = dm.data.work_history[0].company.ToString().Replace(' ', '+');
+                vcard.title = dm.data.work_history[0].position.ToString().Replace(' ', '+').ToUpper();
+                vcard.work = individual.phone == null ? "Not+Provided" : individual.phone.ToString().Replace(' ', '+');
+                
 
 
                 vcard.email = (string)individual.email.Replace("@", "%40");
                 vcard.url = (string)individual.website.Replace("@", "%40");
                 vcard.note = string.Format(@" InfoMetriQ VCard : [{0}] [{1}] Award:[{2}]", (string)individual.verified_status.Replace(' ', '+'),
-                    (string)individual.account_type.Replace(' ', '+'),Utils. (string)individual.recognition.Replace(' ', '+'));
+                    (string)individual.account_type.Replace(' ', '+'),
+                    individual.recognition != null? Utils.TrimNonAscii((string)individual.recognition.Replace(' ', '+')):"None");
 
 
 
@@ -320,7 +350,8 @@ namespace DermalogMultiScannerDemo.winforms
                         token = JToken.Parse(strResponse);
                         newDM.strResponse =  JObject.Parse(token.ToString());
                         //newDM.strResponse.data.individual.about =  newDM.Data.about = "Available Online";;
-                        newDM.strResponse.data.individual.about = newDM.Data.about = Utils.TrimNonAscii((string)newDM.Data.about);
+                        newDM.strResponse.data.individual.about = newDM.Data.about =
+                           newDM.Data.about != null?  Utils.TrimNonAscii((string)newDM.Data.about) : "Not Provided";
 
 
 

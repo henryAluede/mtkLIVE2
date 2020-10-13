@@ -553,9 +553,9 @@
             // 
             this.bunifuTransition1.SetDecoration(this.pix_login, BunifuAnimatorNS.DecorationType.None);
             this.pix_login.Image = ((System.Drawing.Image)(resources.GetObject("pix_login.Image")));
-            this.pix_login.Location = new System.Drawing.Point(730, 385);
+            this.pix_login.Location = new System.Drawing.Point(743, 385);
             this.pix_login.Name = "pix_login";
-            this.pix_login.Size = new System.Drawing.Size(184, 19);
+            this.pix_login.Size = new System.Drawing.Size(171, 19);
             this.pix_login.TabIndex = 38;
             this.pix_login.TabStop = false;
             this.pix_login.Visible = false;
@@ -583,13 +583,13 @@
             this.btn_getData.IconVisible = true;
             this.btn_getData.IconZoom = 90D;
             this.btn_getData.IsTab = false;
-            this.btn_getData.Location = new System.Drawing.Point(730, 466);
+            this.btn_getData.Location = new System.Drawing.Point(743, 466);
             this.btn_getData.Name = "btn_getData";
             this.btn_getData.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btn_getData.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.btn_getData.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_getData.selected = false;
-            this.btn_getData.Size = new System.Drawing.Size(184, 36);
+            this.btn_getData.Size = new System.Drawing.Size(171, 36);
             this.btn_getData.TabIndex = 2;
             this.btn_getData.Text = "Generate VCard";
             this.btn_getData.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -624,7 +624,7 @@
             this.bunifuTransition1.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox1.Location = new System.Drawing.Point(503, 376);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(208, 209);
+            this.pictureBox1.Size = new System.Drawing.Size(221, 209);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 39;
             this.pictureBox1.TabStop = false;

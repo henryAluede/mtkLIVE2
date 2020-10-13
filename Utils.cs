@@ -17,6 +17,7 @@ using System.Dynamic;
 using Dermalog.Afis.FingerCode3;
 using Bunifu.UI.WinForms;
 using Alertform;
+using System.Text.RegularExpressions;
 
 namespace DermalogMultiScannerDemo
 {
@@ -625,6 +626,19 @@ namespace DermalogMultiScannerDemo
             
         }
 
+        public static string TrimNonAscii(string value)
+        {
+            if (!string.IsNullOrEmpty(value))
+            {
+                string pattern = "[^ -~]+";
+                Regex reg_exp = new Regex(pattern);
+                return reg_exp.Replace(value, "");
+            }
+            else
+            {
+                return "";
+            }
+        }
 
         public static void show_ClientExist_Online(String enteredUsername)
         {
@@ -675,8 +689,10 @@ namespace DermalogMultiScannerDemo
                 string APIAddress = @"http://chart.apis.google.com/chart?chf=a,s,000000|bg,s,FFFFFF&chs=200x200&chld=M|4&cht=qr&chl=";
                 APIAddress += string.Format(@"BEGIN%3aVCARD%0d%0aVERSION%3a2.1%0d%0aN%3a{0}%0d%0aORG%3a{1}%0d%0aTITLE%3a{2}",
                         (string)vcard.name, (string)vcard.org, (string)vcard.title);
-                APIAddress += @"%0d%0aTEL%3bWORK%3bVOICE%3a08055570900%0d%0aTEL%3bHOME%3bVOICE%3a%0d%0aEMAIL%3bPREF%3bINTERNET%3a";
-                APIAddress += string.Format(@"{0}%0d%0aURL%3a{1}%0d%0aNOTE%3a%0d%0aEND%3aVCARD&choe=UTF-8", (string)vcard.email, (string)vcard.url);
+                APIAddress += string.Format(@"%0d%0aTEL%3bWORK%3bVOICE%3a{0}%0d%0aTEL%3bHOME%3bVOICE%3a%0d%0aEMAIL%3bPREF%3bINTERNET%3a",
+                               (string)vcard.work);
+                
+                APIAddress += string.Format(@"{0}%0d%0aURL%3a{1}%0d%0aNOTE%3a{2}%0d%0aEND%3aVCARD&choe=UTF-8", (string)vcard.email, (string)vcard.url, (string)vcard.note);
                 //var baseAddress = "http://localhost/InfoMetriQ/VERIFY_templateSTR";
                 // var baseAddress = string.Format(@"http://localhost/InfoMetriQ/{0}", API_Handle);
                 var baseAddress = string.Format(@"{0}", APIAddress);
