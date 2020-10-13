@@ -153,7 +153,7 @@
             this.btn_exist.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_exist.selected = false;
             this.btn_exist.Size = new System.Drawing.Size(199, 35);
-            this.btn_exist.TabIndex = 4;
+            this.btn_exist.TabIndex = 2;
             this.btn_exist.Text = "Check if it Exist Online";
             this.btn_exist.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_exist.Textcolor = System.Drawing.Color.White;
@@ -225,7 +225,7 @@
             this.btn_checkExistLocal.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_checkExistLocal.selected = false;
             this.btn_checkExistLocal.Size = new System.Drawing.Size(199, 35);
-            this.btn_checkExistLocal.TabIndex = 10;
+            this.btn_checkExistLocal.TabIndex = 1;
             this.btn_checkExistLocal.Text = "Check if it Exist Local";
             this.btn_checkExistLocal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_checkExistLocal.Textcolor = System.Drawing.Color.White;

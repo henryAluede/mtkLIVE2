@@ -36,8 +36,22 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_data));
             BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
+            this.lb_confirmationCode = new MetroFramework.Controls.MetroLabel();
+            this.lb_verifiedStatus = new MetroFramework.Controls.MetroLabel();
+            this.lb_status = new MetroFramework.Controls.MetroLabel();
+            this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel9 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.lb_createDT = new MetroFramework.Controls.MetroLabel();
+            this.lb_accountType = new MetroFramework.Controls.MetroLabel();
+            this.lb_profession = new MetroFramework.Controls.MetroLabel();
+            this.lb_phone = new MetroFramework.Controls.MetroLabel();
+            this.lb_gender = new MetroFramework.Controls.MetroLabel();
+            this.lb_DOB = new MetroFramework.Controls.MetroLabel();
+            this.lb_email = new MetroFramework.Controls.MetroLabel();
+            this.lb_state = new MetroFramework.Controls.MetroLabel();
+            this.lb_country = new MetroFramework.Controls.MetroLabel();
             this.lb_lastname = new MetroFramework.Controls.MetroLabel();
             this.lb_username = new MetroFramework.Controls.MetroLabel();
             this.lb_firstname = new MetroFramework.Controls.MetroLabel();
@@ -61,25 +75,13 @@
             this.pix_login = new System.Windows.Forms.PictureBox();
             this.btn_getData = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuTransition1 = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.lb_email = new MetroFramework.Controls.MetroLabel();
-            this.lb_state = new MetroFramework.Controls.MetroLabel();
-            this.lb_country = new MetroFramework.Controls.MetroLabel();
-            this.lb_createDT = new MetroFramework.Controls.MetroLabel();
-            this.lb_accountType = new MetroFramework.Controls.MetroLabel();
-            this.lb_profession = new MetroFramework.Controls.MetroLabel();
-            this.lb_phone = new MetroFramework.Controls.MetroLabel();
-            this.lb_gender = new MetroFramework.Controls.MetroLabel();
-            this.lb_DOB = new MetroFramework.Controls.MetroLabel();
-            this.lb_verifiedStatus = new MetroFramework.Controls.MetroLabel();
-            this.lb_status = new MetroFramework.Controls.MetroLabel();
-            this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel9 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.lb_confirmationCode = new MetroFramework.Controls.MetroLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuCards1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pixBarcode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pix_client)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pix_login)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuGradientPanel1
@@ -98,16 +100,6 @@
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(466, 516);
             this.bunifuGradientPanel1.TabIndex = 0;
-            // 
-            // bunifuCustomLabel2
-            // 
-            this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel2, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(22, 37);
-            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(60, 13);
-            this.bunifuCustomLabel2.TabIndex = 0;
-            this.bunifuCustomLabel2.Text = "User Name";
             // 
             // bunifuCards1
             // 
@@ -156,6 +148,156 @@
             this.bunifuCards1.ShadowDepth = 20;
             this.bunifuCards1.Size = new System.Drawing.Size(462, 512);
             this.bunifuCards1.TabIndex = 36;
+            // 
+            // lb_confirmationCode
+            // 
+            this.lb_confirmationCode.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.lb_confirmationCode, BunifuAnimatorNS.DecorationType.None);
+            this.lb_confirmationCode.Location = new System.Drawing.Point(116, 480);
+            this.lb_confirmationCode.Name = "lb_confirmationCode";
+            this.lb_confirmationCode.Size = new System.Drawing.Size(81, 19);
+            this.lb_confirmationCode.TabIndex = 62;
+            this.lb_confirmationCode.Text = "metroLabel1";
+            // 
+            // lb_verifiedStatus
+            // 
+            this.lb_verifiedStatus.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.lb_verifiedStatus, BunifuAnimatorNS.DecorationType.None);
+            this.lb_verifiedStatus.Location = new System.Drawing.Point(116, 408);
+            this.lb_verifiedStatus.Name = "lb_verifiedStatus";
+            this.lb_verifiedStatus.Size = new System.Drawing.Size(81, 19);
+            this.lb_verifiedStatus.TabIndex = 61;
+            this.lb_verifiedStatus.Text = "metroLabel1";
+            // 
+            // lb_status
+            // 
+            this.lb_status.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.lb_status, BunifuAnimatorNS.DecorationType.None);
+            this.lb_status.Location = new System.Drawing.Point(116, 379);
+            this.lb_status.Name = "lb_status";
+            this.lb_status.Size = new System.Drawing.Size(81, 19);
+            this.lb_status.TabIndex = 60;
+            this.lb_status.Text = "metroLabel1";
+            // 
+            // bunifuCustomLabel8
+            // 
+            this.bunifuCustomLabel8.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel8, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuCustomLabel8.Location = new System.Drawing.Point(22, 414);
+            this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
+            this.bunifuCustomLabel8.Size = new System.Drawing.Size(76, 13);
+            this.bunifuCustomLabel8.TabIndex = 59;
+            this.bunifuCustomLabel8.Text = "Verified_status";
+            // 
+            // bunifuCustomLabel9
+            // 
+            this.bunifuCustomLabel9.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel9, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuCustomLabel9.Location = new System.Drawing.Point(22, 385);
+            this.bunifuCustomLabel9.Name = "bunifuCustomLabel9";
+            this.bunifuCustomLabel9.Size = new System.Drawing.Size(37, 13);
+            this.bunifuCustomLabel9.TabIndex = 58;
+            this.bunifuCustomLabel9.Text = "Status";
+            // 
+            // bunifuCustomLabel2
+            // 
+            this.bunifuCustomLabel2.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel2, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(22, 37);
+            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(60, 13);
+            this.bunifuCustomLabel2.TabIndex = 0;
+            this.bunifuCustomLabel2.Text = "User Name";
+            // 
+            // lb_createDT
+            // 
+            this.lb_createDT.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.lb_createDT, BunifuAnimatorNS.DecorationType.None);
+            this.lb_createDT.Location = new System.Drawing.Point(116, 350);
+            this.lb_createDT.Name = "lb_createDT";
+            this.lb_createDT.Size = new System.Drawing.Size(81, 19);
+            this.lb_createDT.TabIndex = 57;
+            this.lb_createDT.Text = "metroLabel1";
+            // 
+            // lb_accountType
+            // 
+            this.lb_accountType.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.lb_accountType, BunifuAnimatorNS.DecorationType.None);
+            this.lb_accountType.Location = new System.Drawing.Point(116, 292);
+            this.lb_accountType.Name = "lb_accountType";
+            this.lb_accountType.Size = new System.Drawing.Size(81, 19);
+            this.lb_accountType.TabIndex = 55;
+            this.lb_accountType.Text = "metroLabel1";
+            // 
+            // lb_profession
+            // 
+            this.lb_profession.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.lb_profession, BunifuAnimatorNS.DecorationType.None);
+            this.lb_profession.Location = new System.Drawing.Point(116, 321);
+            this.lb_profession.Name = "lb_profession";
+            this.lb_profession.Size = new System.Drawing.Size(81, 19);
+            this.lb_profession.TabIndex = 56;
+            this.lb_profession.Text = "metroLabel1";
+            // 
+            // lb_phone
+            // 
+            this.lb_phone.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.lb_phone, BunifuAnimatorNS.DecorationType.None);
+            this.lb_phone.Location = new System.Drawing.Point(116, 263);
+            this.lb_phone.Name = "lb_phone";
+            this.lb_phone.Size = new System.Drawing.Size(81, 19);
+            this.lb_phone.TabIndex = 54;
+            this.lb_phone.Text = "metroLabel1";
+            // 
+            // lb_gender
+            // 
+            this.lb_gender.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.lb_gender, BunifuAnimatorNS.DecorationType.None);
+            this.lb_gender.Location = new System.Drawing.Point(116, 205);
+            this.lb_gender.Name = "lb_gender";
+            this.lb_gender.Size = new System.Drawing.Size(81, 19);
+            this.lb_gender.TabIndex = 52;
+            this.lb_gender.Text = "metroLabel1";
+            // 
+            // lb_DOB
+            // 
+            this.lb_DOB.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.lb_DOB, BunifuAnimatorNS.DecorationType.None);
+            this.lb_DOB.Location = new System.Drawing.Point(116, 234);
+            this.lb_DOB.Name = "lb_DOB";
+            this.lb_DOB.Size = new System.Drawing.Size(81, 19);
+            this.lb_DOB.TabIndex = 53;
+            this.lb_DOB.Text = "metroLabel1";
+            // 
+            // lb_email
+            // 
+            this.lb_email.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.lb_email, BunifuAnimatorNS.DecorationType.None);
+            this.lb_email.Location = new System.Drawing.Point(116, 176);
+            this.lb_email.Name = "lb_email";
+            this.lb_email.Size = new System.Drawing.Size(81, 19);
+            this.lb_email.TabIndex = 51;
+            this.lb_email.Text = "metroLabel1";
+            // 
+            // lb_state
+            // 
+            this.lb_state.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.lb_state, BunifuAnimatorNS.DecorationType.None);
+            this.lb_state.Location = new System.Drawing.Point(116, 118);
+            this.lb_state.Name = "lb_state";
+            this.lb_state.Size = new System.Drawing.Size(81, 19);
+            this.lb_state.TabIndex = 49;
+            this.lb_state.Text = "metroLabel1";
+            // 
+            // lb_country
+            // 
+            this.lb_country.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.lb_country, BunifuAnimatorNS.DecorationType.None);
+            this.lb_country.Location = new System.Drawing.Point(116, 147);
+            this.lb_country.Name = "lb_country";
+            this.lb_country.Size = new System.Drawing.Size(81, 19);
+            this.lb_country.TabIndex = 50;
+            this.lb_country.Text = "metroLabel1";
             // 
             // lb_lastname
             // 
@@ -329,8 +471,7 @@
             this.bunifuTransition1.SetDecoration(this.Pix_client, BunifuAnimatorNS.DecorationType.None);
             this.Pix_client.Location = new System.Drawing.Point(503, 60);
             this.Pix_client.Name = "Pix_client";
-            this.Pix_client.Size = new System.Drawing.Size(411, 427);
-            this.Pix_client.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Pix_client.Size = new System.Drawing.Size(268, 301);
             this.Pix_client.TabIndex = 1;
             this.Pix_client.TabStop = false;
             // 
@@ -394,7 +535,7 @@
             this.btn_save.IconVisible = true;
             this.btn_save.IconZoom = 90D;
             this.btn_save.IsTab = false;
-            this.btn_save.Location = new System.Drawing.Point(599, 549);
+            this.btn_save.Location = new System.Drawing.Point(753, 508);
             this.btn_save.Name = "btn_save";
             this.btn_save.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btn_save.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -412,9 +553,9 @@
             // 
             this.bunifuTransition1.SetDecoration(this.pix_login, BunifuAnimatorNS.DecorationType.None);
             this.pix_login.Image = ((System.Drawing.Image)(resources.GetObject("pix_login.Image")));
-            this.pix_login.Location = new System.Drawing.Point(730, 508);
+            this.pix_login.Location = new System.Drawing.Point(743, 385);
             this.pix_login.Name = "pix_login";
-            this.pix_login.Size = new System.Drawing.Size(184, 19);
+            this.pix_login.Size = new System.Drawing.Size(171, 19);
             this.pix_login.TabIndex = 38;
             this.pix_login.TabStop = false;
             this.pix_login.Visible = false;
@@ -426,7 +567,7 @@
             this.btn_getData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btn_getData.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_getData.BorderRadius = 0;
-            this.btn_getData.ButtonText = "Get Client Data";
+            this.btn_getData.ButtonText = "Generate VCard";
             this.btn_getData.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuTransition1.SetDecoration(this.btn_getData, BunifuAnimatorNS.DecorationType.None);
             this.btn_getData.DisabledColor = System.Drawing.Color.Gray;
@@ -442,15 +583,15 @@
             this.btn_getData.IconVisible = true;
             this.btn_getData.IconZoom = 90D;
             this.btn_getData.IsTab = false;
-            this.btn_getData.Location = new System.Drawing.Point(553, 500);
+            this.btn_getData.Location = new System.Drawing.Point(743, 466);
             this.btn_getData.Name = "btn_getData";
             this.btn_getData.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btn_getData.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.btn_getData.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_getData.selected = false;
-            this.btn_getData.Size = new System.Drawing.Size(154, 36);
+            this.btn_getData.Size = new System.Drawing.Size(171, 36);
             this.btn_getData.TabIndex = 2;
-            this.btn_getData.Text = "Get Client Data";
+            this.btn_getData.Text = "Generate VCard";
             this.btn_getData.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_getData.Textcolor = System.Drawing.Color.White;
             this.btn_getData.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -478,145 +619,15 @@
             animation2.TransparencyCoeff = 0F;
             this.bunifuTransition1.DefaultAnimation = animation2;
             // 
-            // lb_email
+            // pictureBox1
             // 
-            this.lb_email.AutoSize = true;
-            this.bunifuTransition1.SetDecoration(this.lb_email, BunifuAnimatorNS.DecorationType.None);
-            this.lb_email.Location = new System.Drawing.Point(116, 176);
-            this.lb_email.Name = "lb_email";
-            this.lb_email.Size = new System.Drawing.Size(81, 19);
-            this.lb_email.TabIndex = 51;
-            this.lb_email.Text = "metroLabel1";
-            // 
-            // lb_state
-            // 
-            this.lb_state.AutoSize = true;
-            this.bunifuTransition1.SetDecoration(this.lb_state, BunifuAnimatorNS.DecorationType.None);
-            this.lb_state.Location = new System.Drawing.Point(116, 118);
-            this.lb_state.Name = "lb_state";
-            this.lb_state.Size = new System.Drawing.Size(81, 19);
-            this.lb_state.TabIndex = 49;
-            this.lb_state.Text = "metroLabel1";
-            // 
-            // lb_country
-            // 
-            this.lb_country.AutoSize = true;
-            this.bunifuTransition1.SetDecoration(this.lb_country, BunifuAnimatorNS.DecorationType.None);
-            this.lb_country.Location = new System.Drawing.Point(116, 147);
-            this.lb_country.Name = "lb_country";
-            this.lb_country.Size = new System.Drawing.Size(81, 19);
-            this.lb_country.TabIndex = 50;
-            this.lb_country.Text = "metroLabel1";
-            // 
-            // lb_createDT
-            // 
-            this.lb_createDT.AutoSize = true;
-            this.bunifuTransition1.SetDecoration(this.lb_createDT, BunifuAnimatorNS.DecorationType.None);
-            this.lb_createDT.Location = new System.Drawing.Point(116, 350);
-            this.lb_createDT.Name = "lb_createDT";
-            this.lb_createDT.Size = new System.Drawing.Size(81, 19);
-            this.lb_createDT.TabIndex = 57;
-            this.lb_createDT.Text = "metroLabel1";
-            // 
-            // lb_accountType
-            // 
-            this.lb_accountType.AutoSize = true;
-            this.bunifuTransition1.SetDecoration(this.lb_accountType, BunifuAnimatorNS.DecorationType.None);
-            this.lb_accountType.Location = new System.Drawing.Point(116, 292);
-            this.lb_accountType.Name = "lb_accountType";
-            this.lb_accountType.Size = new System.Drawing.Size(81, 19);
-            this.lb_accountType.TabIndex = 55;
-            this.lb_accountType.Text = "metroLabel1";
-            // 
-            // lb_profession
-            // 
-            this.lb_profession.AutoSize = true;
-            this.bunifuTransition1.SetDecoration(this.lb_profession, BunifuAnimatorNS.DecorationType.None);
-            this.lb_profession.Location = new System.Drawing.Point(116, 321);
-            this.lb_profession.Name = "lb_profession";
-            this.lb_profession.Size = new System.Drawing.Size(81, 19);
-            this.lb_profession.TabIndex = 56;
-            this.lb_profession.Text = "metroLabel1";
-            // 
-            // lb_phone
-            // 
-            this.lb_phone.AutoSize = true;
-            this.bunifuTransition1.SetDecoration(this.lb_phone, BunifuAnimatorNS.DecorationType.None);
-            this.lb_phone.Location = new System.Drawing.Point(116, 263);
-            this.lb_phone.Name = "lb_phone";
-            this.lb_phone.Size = new System.Drawing.Size(81, 19);
-            this.lb_phone.TabIndex = 54;
-            this.lb_phone.Text = "metroLabel1";
-            // 
-            // lb_gender
-            // 
-            this.lb_gender.AutoSize = true;
-            this.bunifuTransition1.SetDecoration(this.lb_gender, BunifuAnimatorNS.DecorationType.None);
-            this.lb_gender.Location = new System.Drawing.Point(116, 205);
-            this.lb_gender.Name = "lb_gender";
-            this.lb_gender.Size = new System.Drawing.Size(81, 19);
-            this.lb_gender.TabIndex = 52;
-            this.lb_gender.Text = "metroLabel1";
-            // 
-            // lb_DOB
-            // 
-            this.lb_DOB.AutoSize = true;
-            this.bunifuTransition1.SetDecoration(this.lb_DOB, BunifuAnimatorNS.DecorationType.None);
-            this.lb_DOB.Location = new System.Drawing.Point(116, 234);
-            this.lb_DOB.Name = "lb_DOB";
-            this.lb_DOB.Size = new System.Drawing.Size(81, 19);
-            this.lb_DOB.TabIndex = 53;
-            this.lb_DOB.Text = "metroLabel1";
-            // 
-            // lb_verifiedStatus
-            // 
-            this.lb_verifiedStatus.AutoSize = true;
-            this.bunifuTransition1.SetDecoration(this.lb_verifiedStatus, BunifuAnimatorNS.DecorationType.None);
-            this.lb_verifiedStatus.Location = new System.Drawing.Point(116, 408);
-            this.lb_verifiedStatus.Name = "lb_verifiedStatus";
-            this.lb_verifiedStatus.Size = new System.Drawing.Size(81, 19);
-            this.lb_verifiedStatus.TabIndex = 61;
-            this.lb_verifiedStatus.Text = "metroLabel1";
-            // 
-            // lb_status
-            // 
-            this.lb_status.AutoSize = true;
-            this.bunifuTransition1.SetDecoration(this.lb_status, BunifuAnimatorNS.DecorationType.None);
-            this.lb_status.Location = new System.Drawing.Point(116, 379);
-            this.lb_status.Name = "lb_status";
-            this.lb_status.Size = new System.Drawing.Size(81, 19);
-            this.lb_status.TabIndex = 60;
-            this.lb_status.Text = "metroLabel1";
-            // 
-            // bunifuCustomLabel8
-            // 
-            this.bunifuCustomLabel8.AutoSize = true;
-            this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel8, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuCustomLabel8.Location = new System.Drawing.Point(22, 414);
-            this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
-            this.bunifuCustomLabel8.Size = new System.Drawing.Size(76, 13);
-            this.bunifuCustomLabel8.TabIndex = 59;
-            this.bunifuCustomLabel8.Text = "Verified_status";
-            // 
-            // bunifuCustomLabel9
-            // 
-            this.bunifuCustomLabel9.AutoSize = true;
-            this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel9, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuCustomLabel9.Location = new System.Drawing.Point(22, 385);
-            this.bunifuCustomLabel9.Name = "bunifuCustomLabel9";
-            this.bunifuCustomLabel9.Size = new System.Drawing.Size(37, 13);
-            this.bunifuCustomLabel9.TabIndex = 58;
-            this.bunifuCustomLabel9.Text = "Status";
-            // 
-            // lb_confirmationCode
-            // 
-            this.lb_confirmationCode.AutoSize = true;
-            this.bunifuTransition1.SetDecoration(this.lb_confirmationCode, BunifuAnimatorNS.DecorationType.None);
-            this.lb_confirmationCode.Location = new System.Drawing.Point(116, 480);
-            this.lb_confirmationCode.Name = "lb_confirmationCode";
-            this.lb_confirmationCode.Size = new System.Drawing.Size(81, 19);
-            this.lb_confirmationCode.TabIndex = 62;
-            this.lb_confirmationCode.Text = "metroLabel1";
+            this.bunifuTransition1.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox1.Location = new System.Drawing.Point(503, 376);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(221, 209);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 39;
+            this.pictureBox1.TabStop = false;
             // 
             // Form_data
             // 
@@ -624,6 +635,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(921, 596);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pix_login);
             this.Controls.Add(this.btn_getData);
             this.Controls.Add(this.btn_save);
@@ -646,6 +658,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pixBarcode)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pix_client)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pix_login)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -692,5 +705,6 @@
         private MetroFramework.Controls.MetroLabel lb_email;
         private MetroFramework.Controls.MetroLabel lb_state;
         private MetroFramework.Controls.MetroLabel lb_country;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

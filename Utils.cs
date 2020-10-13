@@ -628,11 +628,17 @@ namespace DermalogMultiScannerDemo
 
         public static string TrimNonAscii(string value)
         {
-            string pattern = "[^ -~]+";
-            Regex reg_exp = new Regex(pattern);
-            return reg_exp.Replace(value, "");
+            if (!string.IsNullOrEmpty(value))
+            {
+                string pattern = "[^ -~]+";
+                Regex reg_exp = new Regex(pattern);
+                return reg_exp.Replace(value, "");
+            }
+            else
+            {
+                return "";
+            }
         }
-
 
         public static void show_ClientExist_Online(String enteredUsername)
         {
@@ -658,6 +664,53 @@ namespace DermalogMultiScannerDemo
             fm.ShowDialog();
         }
 
+
+        public static System.Drawing.Image gen_specialQRCODE(dynamic vcard2)
+        {
+            dynamic vcard = new ExpandoObject();
+            vcard = vcard2;
+            //vcard.name = "henry aluede".Replace(' ', '+');
+            //vcard.org = "Globacom Nigeria".Replace(' ', '+');
+            //vcard.title = "Billing MIS".Replace(' ', '+');
+
+
+
+            //vcard.email = "henry.aluede@gloworld.com".Replace("@", "%40");
+            //vcard.url = "www.jumia.com";
+
+
+
+
+            try
+            {
+                //var baseAddress = "http://www.bookersklub.com/ptmfb/testubasvccc/ubaverifysvc";
+                //var baseAddress = "http://192.168.8.109/sam/ptmfb/testubasvccc/ubaverifysvc";
+                //string APIAddress = Properties.Settings.Default.webAPIAddress;
+                string APIAddress = @"http://chart.apis.google.com/chart?chf=a,s,000000|bg,s,FFFFFF&chs=200x200&chld=M|4&cht=qr&chl=";
+                APIAddress += string.Format(@"BEGIN%3aVCARD%0d%0aVERSION%3a2.1%0d%0aN%3a{0}%0d%0aORG%3a{1}%0d%0aTITLE%3a{2}",
+                        (string)vcard.name, (string)vcard.org, (string)vcard.title);
+                APIAddress += string.Format(@"%0d%0aTEL%3bWORK%3bVOICE%3a{0}%0d%0aTEL%3bHOME%3bVOICE%3a%0d%0aEMAIL%3bPREF%3bINTERNET%3a",
+                               (string)vcard.work);
+                
+                APIAddress += string.Format(@"{0}%0d%0aURL%3a{1}%0d%0aNOTE%3a{2}%0d%0aEND%3aVCARD&choe=UTF-8", (string)vcard.email, (string)vcard.url, (string)vcard.note);
+                //var baseAddress = "http://localhost/InfoMetriQ/VERIFY_templateSTR";
+                // var baseAddress = string.Format(@"http://localhost/InfoMetriQ/{0}", API_Handle);
+                var baseAddress = string.Format(@"{0}", APIAddress);
+                //var baseAddress = string.Format(@"{0}/{1}", APIAddress, API_Handle);
+                //var baseAddress = Properties.Settings.Default.NIBSSAddress;
+                var cli = new WebClient();
+                cli.Headers[HttpRequestHeader.ContentType] = "application/json";
+
+                System.Drawing.Image response = convertBinarytoImage(cli.DownloadData(baseAddress));
+
+                return response;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+
+        }
 
 
         public static Dictionary<string, string> check_InternetID_exist_old(string contains)
